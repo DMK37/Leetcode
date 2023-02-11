@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace leet
+﻿namespace leet
 {
     class Program
     {
@@ -16,8 +14,9 @@ namespace leet
 
             string s = "abdnjksdskssfffsf";
             Console.WriteLine(Solution.LengthOfLongestSubstring(s));
-            Console.WriteLine(Solution.MyAtoi("4193 with words"));
-            Console.WriteLine(Solution.MyAtoi("-91283472332"));
+            // Console.WriteLine(Solution.MyAtoi("4193 with words"));
+            Console.WriteLine(Solution.MyAtoi("2147483648"));
+            Console.WriteLine(Solution.Reverse(-321));
         }
     }
 }

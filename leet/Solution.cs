@@ -52,13 +52,41 @@ namespace leet
 			int num = 0;
 			int size = 0;
 			bool IsPlus = true;
+			
+			if (s[size] >= '0' && s[size] <= '9')
+			{
+				if((double)num*10 > int.MaxValue)
+					return Int32.MaxValue;
+				if ((double)num * 10 < int.MinValue) 
+					return Int32.MinValue;
+				num *= 10;
+				if (IsPlus)
+					num += s[size] - 48;
+				else
+					num -= s[size] - 48;
+			}
+			else
+			{
+				if (s[size] == '-')
+					IsPlus = false;
+				else
+				if (s[size] == '+') { }
+				else if (s[size] == ' ')
+				{
+				}
+				else
+					return num;
+			}
+
+			size++;
+
 			while(size < s.Length)
 			{
 				if (s[size] >= '0' && s[size] <= '9')
 				{
-					if((double)num*10 > int.MaxValue)
+					if((double)num*10 + (s[size]-48) >= int.MaxValue)
 						return Int32.MaxValue;
-					if ((double)num * 10 < int.MinValue) 
+					if ((double)num*10 - (s[size]-48) <= int.MinValue) 
 						return Int32.MinValue;
                     num *= 10;
                     if (IsPlus)
@@ -68,12 +96,12 @@ namespace leet
 				}
 				else
 				{
-					if (s[size] == '-')
+					if (s[size] == '-' && s[size-1] == ' ')
 						IsPlus = false;
 					else
-					if (s[size] == '+') { }
+					if (s[size] == '+' && s[size-1] == ' ') { }
 					else
-					if (s[size] == ' ') { }
+					if (s[size] == ' ' && s[size-1] == ' ') { }
 					else
 						break;
                 }
@@ -81,6 +109,22 @@ namespace leet
 				
 			}
 			return num;
+        }
+
+        public static int Reverse(int x)
+        {
+	        int tmp;
+	        long res = 0;
+	        //bool IsPos = (x > 0) ? true : false;
+	        while (x != 0)
+	        {
+		        tmp = x % 10;
+		        res = res * 10 + tmp;
+		        x /= 10;
+		        if (res > int.MaxValue || res < int.MinValue)
+			        return 0;
+	        }
+	        return (int)res;
         }
     }
 }
