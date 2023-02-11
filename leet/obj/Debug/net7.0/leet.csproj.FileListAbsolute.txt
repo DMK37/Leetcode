@@ -1,0 +1,15 @@
+/Users/dima/projects/leet/leet/bin/Debug/net7.0/leet
+/Users/dima/projects/leet/leet/bin/Debug/net7.0/leet.deps.json
+/Users/dima/projects/leet/leet/bin/Debug/net7.0/leet.runtimeconfig.json
+/Users/dima/projects/leet/leet/bin/Debug/net7.0/leet.dll
+/Users/dima/projects/leet/leet/bin/Debug/net7.0/leet.pdb
+/Users/dima/projects/leet/leet/obj/Debug/net7.0/leet.csproj.AssemblyReference.cache
+/Users/dima/projects/leet/leet/obj/Debug/net7.0/leet.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dima/projects/leet/leet/obj/Debug/net7.0/leet.AssemblyInfoInputs.cache
+/Users/dima/projects/leet/leet/obj/Debug/net7.0/leet.AssemblyInfo.cs
+/Users/dima/projects/leet/leet/obj/Debug/net7.0/leet.csproj.CoreCompileInputs.cache
+/Users/dima/projects/leet/leet/obj/Debug/net7.0/leet.dll
+/Users/dima/projects/leet/leet/obj/Debug/net7.0/refint/leet.dll
+/Users/dima/projects/leet/leet/obj/Debug/net7.0/leet.pdb
+/Users/dima/projects/leet/leet/obj/Debug/net7.0/leet.genruntimeconfig.cache
+/Users/dima/projects/leet/leet/obj/Debug/net7.0/ref/leet.dll
