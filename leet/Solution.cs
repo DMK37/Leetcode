@@ -52,12 +52,14 @@ namespace leet
 			int num = 0;
 			int size = 0;
 			bool IsPlus = true;
-			double max = int.MaxValue;
 			while(size < s.Length)
 			{
 				if (s[size] >= '0' && s[size] <= '9')
 				{
-					
+					if((double)num*10 > int.MaxValue)
+						return Int32.MaxValue;
+					if ((double)num * 10 < int.MinValue) 
+						return Int32.MinValue;
                     num *= 10;
                     if (IsPlus)
 						num += s[size] - 48;

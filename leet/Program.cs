@@ -17,6 +17,7 @@ namespace leet
             string s = "abdnjksdskssfffsf";
             Console.WriteLine(Solution.LengthOfLongestSubstring(s));
             Console.WriteLine(Solution.MyAtoi("4193 with words"));
+            Console.WriteLine(Solution.MyAtoi("-91283472332"));
         }
     }
 }
