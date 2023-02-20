@@ -21,6 +21,8 @@
             {
                 Console.WriteLine(num);
             }
+            
+            Console.WriteLine(Solution.PivotIndex(new int[] {1,2,3}));
         }
     }
 }

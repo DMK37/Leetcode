@@ -158,6 +158,27 @@ namespace leet
 
 	        return res;
         }
+        
+        public static int PivotIndex(int[] nums)
+        {
+	        int l = 0;
+	        int lSum = 0;
+	        int rSum = 0;
+	        for (int i = 1; i < nums.Length; i++)
+		        rSum += nums[i];
+	        int len = nums.Length;
+	        while (l < len)
+	        {
+		        if (lSum == rSum)
+			        break;
+		        lSum += nums[l++];
+		        if (l >= len)
+			        break;
+		        rSum -= nums[l];
+	        }
+
+	        return l < len ? l : -1;
+        }
     }
 }
 
