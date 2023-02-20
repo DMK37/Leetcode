@@ -145,6 +145,19 @@ namespace leet
 		        return new int[] { l+1, r+1 };
 	        return new int[] { };
         }
+        
+        public static int[] RunningSum(int[] nums)
+        {
+	        int sum = 0;
+	        int[] res = new int[nums.Length];
+	        for (int i = 0; i < nums.Length; i++)
+	        {
+		        sum += nums[i];
+		        res[i] = sum;
+	        }
+
+	        return res;
+        }
     }
 }
 
