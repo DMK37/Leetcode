@@ -17,6 +17,10 @@
             // Console.WriteLine(Solution.MyAtoi("4193 with words"));
             Console.WriteLine(Solution.MyAtoi("2147483648"));
             Console.WriteLine(Solution.Reverse(-321));
+            foreach (var num in Solution.TwoSum2(new int[] {2,7,11,15},0))
+            {
+                Console.WriteLine(num);
+            }
         }
     }
 }
