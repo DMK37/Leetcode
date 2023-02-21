@@ -23,6 +23,9 @@
             }
             
             Console.WriteLine(Solution.PivotIndex(new int[] {1,2,3}));
+            Console.WriteLine(Solution.IsIsomorphic("paper","title"));
+            Console.WriteLine(Solution.IsSubsequence("abc","ahbgdd"));
+            Console.WriteLine(Solution.LongestPalindrome("cbbd"));
         }
     }
 }

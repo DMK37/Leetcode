@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics;
+
 namespace leet
 {
 	public static class Solution
@@ -178,6 +180,77 @@ namespace leet
 	        }
 
 	        return l < len ? l : -1;
+        }
+
+        public static bool IsIsomorphic(string s, string t)
+        {
+	        if (s.Length != t.Length)
+		        return false;
+	        if (s.Length == 0)
+		        return true;
+	        Dictionary<char, char> symbs = new Dictionary<char, char>();
+	        for (int i = 0; i < s.Length; i++)
+	        {
+		        if (symbs.ContainsValue(s[i]) && !symbs.ContainsKey(t[i]))
+			        return false;
+		        if(!symbs.ContainsKey(t[i]))
+			        symbs.Add(t[i],s[i]);
+		        if (s[i] != symbs[t[i]])
+			        return false;
+	        }
+	        return true;
+        }
+        
+        public static bool IsSubsequence(string s, string t)
+        {
+	        if (s.Length > t.Length)
+		        return false;
+	        if (s.Length == 0)
+		        return true;
+	        int idx = 0;
+	        for (int i = 0; i < t.Length; i++)
+	        {
+		        if (s[idx] == t[i])
+		        {
+			        if (++idx == s.Length)
+				        return true;
+		        }
+	        }
+	        return false;
+        }
+        
+        public static string LongestPalindrome(string s)
+        {
+	        if (s == "")
+		        return "";
+	        int len = 1;
+	        int start = 0;
+	        int end = 0;
+	        for (int i = 0; i < s.Length; i++)
+	        {
+		        int len1 = tmp(i, i);
+		        int len2 = tmp(i, i + 1);
+		        len = Math.Max(len1, len2);
+		        if (len > end - start) {
+			        start = i - (len - 1) / 2;
+			        end = i + len / 2;
+		        }
+	        }
+	        
+
+	        int tmp(int mid, int mid2)
+	        {
+		        int l = mid;
+			    int r = mid2;
+			    while (l >= 0 && r < s.Length && s[l] == s[r]) 
+			    { 
+				    l--; 
+				    r++;
+		        }
+			    return r - l - 1;
+	        }
+
+	        return s.Substring(start, end - start + 1);
         }
     }
 }
